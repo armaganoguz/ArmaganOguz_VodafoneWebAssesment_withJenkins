@@ -1,6 +1,6 @@
 #Author: sevkiarmaganoguz@gmail.com
 #Date: 18.08.2022
-#Description
+
 Feature: •	Any browser opens and the “http://automationpractice.com/” page is displayed.
   •	New member registration is performed. (sign up steps) 
   •	By entering user and address information with “Sign in” > “Create Account” option, new user is created. 

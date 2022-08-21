@@ -28,7 +28,6 @@ public class SignupSteps {
 	Scanner scanner;
 	int dressCount, quantity1, quantity2, totalQuantity;
 	String dress1title, dress2title, firstItemName, secondItemName, sc;
-	
 
 	@Given("^user is on home page$")
 	public void user_is_on_home_page() {
@@ -268,7 +267,7 @@ public class SignupSteps {
 	public void user_selects_payment_method_and_completes_the_order() {
 		WebElement payByBank = driver.findElement(By.cssSelector("a[title='Pay by bank wire']"));
 		payByBank.click();
-		
+
 		WebElement confirm = driver
 				.findElement(By.cssSelector("button[class='button btn btn-default button-medium'] span"));
 		confirm.click();
@@ -285,10 +284,9 @@ public class SignupSteps {
 		orderHistory.click();
 
 		System.out.println("User controls the order on 'Menu' > 'Order history and details' screen");
-		
+
 		System.out.println("Closing driver.");
-		
-//		driver.close();
+
 		driver.quit();
 	}
 
