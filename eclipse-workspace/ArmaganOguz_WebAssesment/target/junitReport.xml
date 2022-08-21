@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="55.563">
+    <testcase classname="�&#9;Any browser opens and the �http://automationpractice.com/� page is displayed." name="Check signup is successful with valid credentials" time="55.164">
+        <system-out><![CDATA[Given user is on home page..................................................passed
+When user is on signup page.................................................passed
+And user enters bacanak58me72@gmail.com and navigates to create an account..passed
+And user fills the blanks and register......................................passed
+Then verify that user is created............................................passed
+When User selects 'Dresses' > 'Summer Dresses'..............................passed
+And User adds a product in the basket.......................................passed
+And User search 'Summer'....................................................passed
+Then User adds a product to cart............................................passed
+When User displays 'Cart' > 'Check Out' to verify products and proceeds the check out.passed
+And User selects address and proceeds to checkout...........................passed
+And User accepts terms of service and proceeds to checkout..................passed
+And User selects payment method and completes the order.....................passed
+Then User controls the order on 'Menu' > 'Order history and details' screen.passed
+]]></system-out>
+    </testcase>
+</testsuite>
