@@ -18,8 +18,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
- 
-public class SignupSteps {
+
+public class TestSteps {
 
 	ChromeOptions options;
 	WebDriver driver;
@@ -37,14 +37,14 @@ public class SignupSteps {
 		sc = scanner.nextLine();
 
 		if (sc.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "/chromedriver.exe");
 			options = new ChromeOptions();
 			driver = new ChromeDriver(options);
 		} else if (sc.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "C:/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (sc.equalsIgnoreCase("ie")) {
-			System.setProperty("webdriver.edge.driver", "C:/msedgedriver.exe");
+			System.setProperty("webdriver.edge.driver", "/msedgedriver.exe");
 			driver = new EdgeDriver();
 		} else {
 			System.out.println("not a valid browser");
@@ -92,7 +92,7 @@ public class SignupSteps {
 		WebElement addAddress1 = driver.findElement(By.cssSelector("#address1"));
 		WebElement addAddress2 = driver.findElement(By.cssSelector("#address2"));
 		WebElement addCity = driver.findElement(By.cssSelector("#city"));
-		WebElement addState = driver.findElement(By.cssSelector("#id_state"));
+		WebElement addState = driver.findElement(By.id("id_state"));
 		WebElement addPostCode = driver.findElement(By.cssSelector("#postcode"));
 		WebElement addPhone = driver.findElement(By.cssSelector("#phone_mobile"));
 		WebElement addAlias = driver.findElement(By.cssSelector("#alias"));
@@ -136,8 +136,9 @@ public class SignupSteps {
 		WebElement dresses = driver.findElement(
 				By.xpath("/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/a[1]"));
 		action.moveToElement(dresses).perform();
-		WebElement summerDresses = driver.findElement(By.xpath(
-				"/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[2]/ul[1]/li[3]/a[1]"));
+		wait.until(ExpectedConditions
+				.visibilityOfElementLocated(By.cssSelector("li[class='sfHover'] a[title='Summer Dresses']")));
+		WebElement summerDresses = driver.findElement(By.cssSelector("li[class='sfHover'] a[title='Summer Dresses']"));
 		summerDresses.click();
 
 		System.out.println("Inside step - User selects 'Dresses' > 'Summer Dresses'");

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="55.563">
-    <testcase classname="�&#9;Any browser opens and the �http://automationpractice.com/� page is displayed." name="Check signup is successful with valid credentials" time="55.164">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="93.092">
+    <testcase classname="�&#9;Any browser opens and the &quot;http://automationpractice.com/&quot; page is displayed." name="Check the conditions specified in the assessment with the correct parameters" time="92.439">
         <system-out><![CDATA[Given user is on home page..................................................passed
 When user is on signup page.................................................passed
-And user enters bacanak58me72@gmail.com and navigates to create an account..passed
+And user enters vodafoneassesment9993@gmail.com and navigates to create an account.passed
 And user fills the blanks and register......................................passed
 Then verify that user is created............................................passed
 When User selects 'Dresses' > 'Summer Dresses'..............................passed
