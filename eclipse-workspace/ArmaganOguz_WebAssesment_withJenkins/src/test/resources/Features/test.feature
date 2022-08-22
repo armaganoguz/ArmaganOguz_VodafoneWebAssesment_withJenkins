@@ -12,7 +12,7 @@ Feature: •	Any browser opens and the "http://automationpractice.com/" page is di
   •	On the "Shipping" screen that opens, the Cargo option and terms of service are accepted and with the "Proceed to checkout" option,  the "Payment" step is appeared. 
   •	The order is completed by selecting any payment method on the payment screen. 
   •	The created order will be controlled on "Order history and details" screen that is located in user menu controlled.
- 
+  
   Scenario: Check the conditions specified in the assessment with the correct parameters
   
     Given user is on home page

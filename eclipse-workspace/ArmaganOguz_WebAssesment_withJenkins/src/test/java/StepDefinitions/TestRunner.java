@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 		"StepDefinitions" }, monochrome = true, plugin = { "pretty", "html:target/htmlReport",
 				"json:target/jsonReport.json", "junit:target/junitReport.xml" })
 public class TestRunner {
-
+ 
 	String username = System.getenv("BROWSERSTACK_USERNAME");
 	String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
 	String buildName = System.getenv("JENKINS_LABEL");
@@ -27,7 +27,7 @@ public class TestRunner {
 	browserstackOptions.put("osVersion", "10");
 	browserstackOptions.put("sessionName", "BStack Build Name: " + buildName);
 	browserstackOptions.put("seleniumVersion", "4.0.0");
-	
+
 	capabilities.setCapability("browserName", "Chrome");
 	capabilities.setCapability("browserVersion", "104.0");
 	capabilities.setCapability("bstack:options", browserstackOptions);
